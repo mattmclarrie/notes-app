@@ -6,13 +6,13 @@ const filters = {
 
 renderNotes(notes, filters)
 
-document.querySelector('#create-note').addEventListener('click', function (event) {
+document.querySelector('#create-note').addEventListener('click', function (e) {
     notes.push({
         id: uuidv4(),
         title: '',
         body: ''
     })
-    savedNotes(notes)
+    saveNotes(notes)
     renderNotes(notes, filters)
 })
 
